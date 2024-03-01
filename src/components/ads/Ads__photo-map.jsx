@@ -2,10 +2,10 @@ import arrow_icon from '../../img/elements/list_chevron.png';
 import map_photo from '../../img/elements/map_photo.png';
 import './style.css';
 
-const Ads__photoMap = () => {
+const AdsPhotoMap = () => {
     return (
         <div className="container">
-            <img className='photo-map' src={map_photo} />
+            <div className="after-img"><img className='photo-map' src={map_photo} /></div>
             <div className="ads__text">
                 <h3 className='bold'>Introduction Photo Maps!</h3>
                 <p>Review & explore yours now</p>
@@ -15,4 +15,4 @@ const Ads__photoMap = () => {
     );
 }
  
-export default Ads__photoMap;
+export default AdsPhotoMap;

@@ -2,6 +2,9 @@
     height: 500px;
     overflow-y: overlay;
     background-color: white;
+}
+
+.feed__post {
     padding: 0 8px;
 }
 
