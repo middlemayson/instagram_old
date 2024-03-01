@@ -7,14 +7,14 @@
 }
 
 .navbar img {
-    width: 25px;
+    width: 35px;
 }
 
 .btn-nav {
     display: flex;
     position: relative;
     justify-content: center;
-    padding: 13.25px;
+    padding: 6px 19.5px;
     background-size: contain;
     border-right: 1px solid #232323;
     border-top: 1px solid #232323;

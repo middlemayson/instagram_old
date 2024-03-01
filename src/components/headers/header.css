@@ -1,8 +1,8 @@
 .header {
     background-image: url('../../img/elements/actionbar_background_tile.png');
     border-radius: 6px 6px 0 0;
-    height: 45px;
-    width: 70%;
+    height: 55px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -14,14 +14,14 @@
 }
 
 .logo-header {
-    max-width: 100px;
+    max-width: 130px;
 }
 
 .btn-shadow {
     box-shadow: inset 0px 0px 2px black;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding: 5px 9px;
-    height: 30px;
+    height: 35px;
     border-radius: 4px;
 }
 

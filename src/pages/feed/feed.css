@@ -1,0 +1,33 @@
+.feed {
+    height: 500px;
+    overflow-y: overlay;
+    background-color: white;
+    padding: 0 8px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.unloaded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.unloaded img {
+    animation: 1s linear infinite rotate;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
