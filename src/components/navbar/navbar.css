@@ -1,0 +1,48 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: 45px;
+}
+
+.navbar img {
+    width: 25px;
+}
+
+.btn-nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 13.25px;
+    background-size: contain;
+    border-right: 1px solid #232323;
+    border-top: 1px solid #232323;
+    box-sizing: border-box;
+    background-image: url('../../img/elements/tab_bar_button_bg_tile_horizontal_enabled.png');
+}
+
+.btn-nav:first-child {
+    border-radius: 0 0 0 4px;
+}
+
+.btn-nav:last-child {
+    border-right: none;
+    border-radius: 0 0 4px 0;
+}
+
+.btn-nav:hover {
+    background-image: url('../../img/elements/tab_bar_button_bg_tile_horizontal_enabled_pressed.png');
+}
+
+.btn-nav img:hover .btn-nav::after {
+    content: '';
+    background-image: url('../../img/elements/action_bar_glyph_pressed_overlay.png');
+    width: 15px;
+    height: 15px;
+    position: absolute;
+}
+
+.blue {
+    background-image: url('../../img/elements/actionbar_background_tile.png');
+}

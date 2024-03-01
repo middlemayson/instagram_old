@@ -1,0 +1,9 @@
+body {
+    width: 374px;
+    max-height: 667px;
+    background-image: url('../img/elements/bg_texture.jpg');
+}
+
+.ghost-element {
+    width: 33px;
+}

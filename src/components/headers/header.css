@@ -1,0 +1,32 @@
+.header {
+    background-image: url('../../img/elements/actionbar_background_tile.png');
+    border-radius: 6px 6px 0 0;
+    height: 45px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8px;
+    border-bottom: 1px solid #063056;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo-header {
+    max-width: 100px;
+}
+
+.btn-shadow {
+    box-shadow: inset 0px 0px 2px black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 5px 9px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.btn-shadow:hover{
+    filter: brightness(80%);
+}
+
+
