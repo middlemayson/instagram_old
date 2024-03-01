@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #B2B2B2;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%);
+}
+
+.photo-map {
+    height: 85px;
+    position: relative;
+}
+
+.container::after {
+    content: '40';
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    top: 70px;
+    left: 60px;
+    align-items: center;
+    border-radius: 16px;
+    padding-top: 2px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0px 1px 3px #0000006b, 0px -1px 0px #ffffffaf, 0px 0px 0px 2px #00000062;
+    background: rgb(129,161,189);
+    background: linear-gradient(180deg, rgba(129,161,189,1) 0%, rgba(65,116,156,1) 100%);
+}
+
+.map-arrow {
+    height: 30px;
+}

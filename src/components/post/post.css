@@ -1,5 +1,5 @@
 .post {
-    border-bottom: 1px solid #EAEAEA;
+    
     padding-bottom: 10px;
 }
 
@@ -53,7 +53,7 @@
 
 .post__desc img, .post__like img {
     height: 12px;
-    padding-right: 5px;
+    padding-right: 7px;
 }
 
 .post__desc span, .post__comments span {
@@ -61,5 +61,46 @@
 }
 
 .post__comments {
-    margin-left: 16px;
+    margin-left: 18px;
+}
+
+.post__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.post__btn .flexed {
+    gap: 10px;
+}
+
+.post__btn-like, .post__btn-comment, .post__btn-more {
+    width: 45px;
+    height: 45px;
+    background-size: cover;
+}
+
+.post__btn-like {
+    background-image: url('../../img/elements/stream_photo_activity_button_like_default.png');
+}
+
+.post__btn-like:hover {
+    background-image: url('../../img/elements/stream_photo_activity_button_like_default_pressed.png');
+}
+
+.post__btn-comment {
+    background-image: url('../../img/elements/stream_photo_activity_button_comment_default.png')
+}
+
+.post__btn-comment:hover {
+    background-image: url('../../img/elements/stream_photo_activity_button_comment_default_pressed.png')
+}
+
+.post__btn-more {
+    background-image: url('../../img/elements/stream_photo_actions_button_more_default.png')
+}
+
+.post__btn-more {
+    background-image: url('../../img/elements/stream_photo_actions_button_more_default_pressed.png')
 }

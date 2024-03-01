@@ -29,6 +29,13 @@ const Post = ({author, location, photo, avatar, desc, likes, comments, timePubli
                 <p><span className='blue_text bold'>middle.mayson</span>like share follow</p>
                 <p><span className='blue_text bold'>spam.user</span>please follow me</p>
             </div>
+            <div className="post__btn">
+                <div className='flexed'>
+                    <div className="post__btn-like"></div>
+                    <div className="post__btn-comment"></div>
+                </div>
+                <div className="post__btn-more"></div>
+            </div>
         </div>
     </section>
 );
