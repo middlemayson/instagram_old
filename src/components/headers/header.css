@@ -29,4 +29,11 @@
     filter: brightness(80%);
 }
 
-
+.header__title {
+    font-family: headerTitle;
+    text-transform: uppercase;
+    opacity: 0.8;
+    color: white;
+    font-size: 20px;
+    text-shadow: 0px 1px 0.5px rgba(0, 0, 0, 0.486);
+}

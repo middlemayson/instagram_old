@@ -4,6 +4,9 @@ import Header from './components/headers/Header';
 import Navbar from './components/navbar/Navbar';
 import Explore from './pages/explore/Explore';
 import Feed from './pages/feed/Feed';
+import Profile from './pages/profile/Profile';
+import News from './pages/news/News';
+
 import './style/main.css';
 import './style/reset.css';
 
@@ -15,7 +18,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Feed />} />
           <Route path='/explore' element={<Explore />} />
-          
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/news' element={<News />} />
         </Routes>
         
         <Navbar />

@@ -6,6 +6,13 @@
     --gray: #aeaeae;
 }
 
+@font-face {
+    font-family: "headerTitle";
+    src: url('../fonts/FreigSanBolSC.ttf');
+    font-style: normal; 
+    font-weight: normal; 
+}
+
 body {
     width: 374px;
     max-height: 667px;

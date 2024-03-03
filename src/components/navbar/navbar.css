@@ -22,17 +22,29 @@
     background-image: url('../../img/elements/tab_bar_button_bg_tile_horizontal_enabled.png');
 }
 
-.btn-nav:first-child {
+.btn-nav--active {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 6px 19.5px;
+    background-size: contain;
+    border-right: 1px solid #232323;
+    border-top: 1px solid #232323;
+    box-sizing: border-box;
+    background-image: url('../../img/elements/tab_bar_button_bg_tile_horizontal_enabled_pressed.png');
+}
+
+.btn-nav:first-child, .btn-nav--active:first-child {
     border-radius: 0 0 0 4px;
 }
 
-.btn-nav:last-child {
+.btn-nav:last-child, .btn-nav--active:last-child {
     border-right: none;
     border-radius: 0 0 4px 0;
 }
 
 .btn-nav:hover {
-    background-image: url('../../img/elements/tab_bar_button_bg_tile_horizontal_enabled_pressed.png');
+    opacity: .9;
 }
 
 .btn-nav img:hover .btn-nav::after {

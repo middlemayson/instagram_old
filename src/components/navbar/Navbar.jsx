@@ -9,13 +9,17 @@ import profile_icon from '../../img/elements/tab_bar_glyph_profile.png';
 import './navbar.css';
 
 const Navbar = () => {
+
+    const activeLink = 'btn-nav--active';
+    const normalLink = 'btn-nav';
+
     return (
     <section className="navbar">
-        <NavLink to='/' className="btn-nav"><img src={feed_icon} alt="" /></NavLink>
-        <NavLink to='/explore' className="btn-nav"><img src={explore_icon} alt="" /></NavLink>
+        <NavLink to='/' className={({isActive}) => isActive ? activeLink : normalLink}><img src={feed_icon} alt="" /></NavLink>
+        <NavLink to='/explore' className={({isActive}) => isActive ? activeLink : normalLink}><img src={explore_icon} alt="" /></NavLink>
         <div className="btn-nav blue"><img src={camera_icon} alt="" /></div>
-        <div className="btn-nav"><img src={news_icon} alt="" /></div>
-        <div className="btn-nav"><img src={profile_icon} alt="" /></div>
+        <NavLink to='/news' className={({isActive}) => isActive ? activeLink : normalLink}><img src={news_icon} alt="" /></NavLink>
+        <NavLink to='/profile' className={({isActive}) => isActive ? activeLink : normalLink}><img src={profile_icon} alt="" /></NavLink>
     </section>
     );
 }
