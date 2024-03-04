@@ -2,6 +2,10 @@ import { useState } from 'react';
 
 import { profile } from '../../components/array/profile';
 import ProfileInfo from '../../components/profile/ProfileInfo';
+import Photo from '../../components/photo/Photo';
+import { photoList } from '../../components/array/photoList';
+import Post from '../../components/post/Post';
+import { feedList } from '../../components/array/FeedList';
 
 import gridBlue_icon from '../../img/elements/grid_icon.png';
 import gridGray_icon from '../../img/elements/grid_icon_gray.png';
@@ -36,10 +40,16 @@ const Profile = () => {
                 </div>
             </div>
             <div className={activeTab === 'grid' ? 'profile__photo-grid active' : 'profile__photo-grid'}>
-                GRID
+                {photoList.map((photo) => {
+                    return <Photo key={photo.id} photo={photo.photo} />
+                })}
             </div>
             <div className={activeTab === 'list' ? 'profile__photo-list active' : 'profile__photo-list'}>
-                LIST
+            <div className="feed__post feed__post-profile">
+                {feedList.map((post) => {
+                        return <Post key={post.id} author={post.author} location={post.location} photo={post.photo} avatar={post.avatar} desc={post.desc} likes={post.likes} comments={post.comments} timePublish={post.timePublish} />
+                    })}
+            </div>
             </div>
             <div className={activeTab === 'map' ? 'profile__photo-map active' : 'profile__photo-map'}>
                 MAP

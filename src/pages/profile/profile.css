@@ -28,10 +28,6 @@
     padding: 15px;
 }
 
-.list-btn-area {
-    /* margin-right: 15px; */
-}
-
 .map-btn-area div {
     display: flex;
     gap: 10px;
@@ -47,13 +43,54 @@
 }
 .profile__photo-grid, .profile__photo-list, .profile__photo-map {
     display: none;
+    position: relative;
 }
 
 .active {
     display: flex;
 }
 
+.profile__photo-grid::after {
+    content: '';
+    position: absolute;
+    background-image: url('../../img/elements/active_triangle_icon.png');
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 22px;
+    top: -9px;
+    left: 40px;
+}
+
+.profile__photo-list::after {
+    content: '';
+    position: absolute;
+    background-image: url('../../img/elements/active_triangle_icon.png');
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 22px;
+    top: -9px;
+    left: 130px;
+}
+
 .active-bg {
     background-color: #dddddd;
     border-radius: 0 8px 8px 0;
+}
+
+.profile__photo-grid {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 8px;
+}
+
+.feed__post-profile {
+    border-radius: 8px;
+    margin: 8px;
+    background-color: #eeeeee;
+    border-top: 1px solid white;
+    box-shadow: 0px 1px 3px #0000006b;
 }

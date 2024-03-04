@@ -9,6 +9,10 @@
     color: #333333;
 }
 
+.profile__info {
+    margin-bottom: 16px;
+}
+
 .profile__info-table {
     border-spacing: 0;
     
