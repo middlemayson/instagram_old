@@ -15,6 +15,10 @@
     height: 28px;
 }
 
+.grid-btn-area, .list-btn-area, .map-btn-area {
+    cursor: pointer;
+}
+
 
 .grid-btn-area, .list-btn-area {
     width: 25%;
@@ -25,7 +29,7 @@
 }
 
 .list-btn-area {
-    margin-right: 15px;
+    /* margin-right: 15px; */
 }
 
 .map-btn-area div {
@@ -39,11 +43,17 @@
     width: 50%;
     display: flex;
     align-items: center;
+    padding-left: 15px;
 }
 .profile__photo-grid, .profile__photo-list, .profile__photo-map {
     display: none;
 }
 
 .active {
-    display: block;
+    display: flex;
+}
+
+.active-bg {
+    background-color: #dddddd;
+    border-radius: 0 8px 8px 0;
 }

@@ -12,8 +12,6 @@ import arrow_icon from '../../img/elements/list_chevron.png';
 
 import './profile.css';
 
-    
-
 const Profile = () => {
 
     const [activeTab, setActiveTab] = useState('grid');
@@ -27,10 +25,14 @@ const Profile = () => {
                 return <ProfileInfo key={profile.id} author={profile.author} name={profile.name} avatar={profile.avatar} desc={profile.desc} photosCount={profile.photosCount} followers={profile.followers} following={profile.following} />
             })}
             <div className="profile__btn">
-                <div onClick={() => handleTabClick('grid')} className={activeTab === 'grid && grid-btn-area' ? 'active' : ''} ><img src={activeTab === 'grid' ? gridBlue_icon : gridGray_icon} alt="" /></div>
-                <div onClick={() => handleTabClick('list')} className={activeTab === 'list && list-btn-area' ? 'active' : ''} ><img src={activeTab === 'list' ? listBlue_icon : listGray_icon} alt="" /></div>
-                <div onClick={() => handleTabClick('map')} className={activeTab === 'map && map-btn-area' ? 'active' : ''} >
-                    <div className={activeTab === 'bold' ? 'activ-bg && bold' : 'bold'}><img src={map_icon} alt="" />Photo Map<img className='map-arrow' src={arrow_icon} alt='' /></div>
+                <div onClick={() => handleTabClick('grid')} className={`grid-btn-area ${activeTab === 'grid' ? 'active' : ''}`}>
+                    <img src={activeTab === 'grid' ? gridBlue_icon : gridGray_icon} alt="" />
+                </div>
+                <div onClick={() => handleTabClick('list')} className={`list-btn-area ${activeTab === 'list' ? 'active' : ''}`}>
+                    <img src={activeTab === 'list' ? listBlue_icon : listGray_icon} alt="" />
+                </div>
+                <div onClick={() => handleTabClick('map')} className={`map-btn-area ${activeTab === 'map' ? 'active && active-bg' : ''}`}>
+                    <div className='bold'><img src={map_icon} alt="" />Photo Map<img className='map-arrow' src={arrow_icon} alt='' /></div>
                 </div>
             </div>
             <div className={activeTab === 'grid' ? 'profile__photo-grid active' : 'profile__photo-grid'}>
