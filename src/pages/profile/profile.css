@@ -1,0 +1,49 @@
+.profile {
+    background-image: url('../../img/elements/bg_texture.jpg');
+    background-size: 5%;
+    height: 500px;
+    overflow-y: overlay;
+}
+
+.profile__btn {
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.grid-btn-area img, .list-btn-area img, .map-btn-area img {
+    height: 28px;
+}
+
+
+.grid-btn-area, .list-btn-area {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid #cccccc;
+    padding: 15px;
+}
+
+.list-btn-area {
+    margin-right: 15px;
+}
+
+.map-btn-area div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: end;
+}
+
+.map-btn-area {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.profile__photo-grid, .profile__photo-list, .profile__photo-map {
+    display: none;
+}
+
+.active {
+    display: block;
+}

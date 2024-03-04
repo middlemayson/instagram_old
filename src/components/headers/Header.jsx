@@ -1,10 +1,16 @@
 import { NavLink, Routes, Route } from 'react-router-dom';
 
-import './header.css';
+import {profile} from '../array/profile';
 import instagram_logo from '../../img/elements/action_bar_branding.png';
 import refresh_icon from '../../img/elements/action_bar_glyph_refresh.png';
+import gear_icon from '../../img/elements/gear.png';
+
+import './header.css';
 
 const Header = () => {
+
+    
+        const { author } = profile[0];
 
     
 
@@ -37,8 +43,8 @@ const Header = () => {
             <Route path="/profile" element={
                 <section className="header">
                     <img className='ghost-element' src="" alt="" />
-                    <img className='logo-header' src={instagram_logo} alt="" />
-                    <img className='btn-shadow' src={refresh_icon} alt="" />
+                    <div className='header__title'>{author}</div>
+                    <img className='btn-shadow' src={gear_icon} alt="" />
                 </section>
                 } />
         </Routes>
