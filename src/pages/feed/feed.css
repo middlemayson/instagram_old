@@ -1,5 +1,5 @@
 .feed {
-    height: 500px;
+    max-height: var(--heightScreen);
     overflow-y: overlay;
     background-color: white;
 }

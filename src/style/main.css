@@ -4,6 +4,7 @@
     --blue: #325d80;
     --lightBlue: #5797cc;
     --gray: #aeaeae;
+    --heightScreen: 600px;
 }
 
 @font-face {
@@ -14,9 +15,10 @@
 }
 
 body {
-    width: 374px;
-    max-height: 667px;
+    max-width: 400px;
+    max-height: 800px;
     font-family: "Open Sans", sans-serif;
+    font-size: 11pt;
 }
 
 .ghost-element {
@@ -25,6 +27,7 @@ body {
 
 .blue_text {
     color: var(--blue);
+    cursor: pointer;
 }
 
 .lightBlue_text {

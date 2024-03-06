@@ -1,8 +1,7 @@
 .explore {
     background-image: url('../../img/elements/bg_texture.jpg');
     background-size: 5%;
-    
-    height: 500px;
+    max-height: var(--heightScreen);
     overflow-y: overlay;
 }
 
@@ -35,7 +34,6 @@
 
 .search__input input {
     width: 100%;
-    
     padding: 4px 0;
 }
 
@@ -43,5 +41,4 @@
     height: 16px;
     padding-right: 5px;
     padding-left: 5px;
-    
 }

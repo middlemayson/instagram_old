@@ -1,7 +1,7 @@
 .profile {
     background-image: url('../../img/elements/bg_texture.jpg');
     background-size: 5%;
-    height: 500px;
+    max-height: var(--heightScreen);
     overflow-y: overlay;
 }
 

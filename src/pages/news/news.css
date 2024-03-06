@@ -1,5 +1,6 @@
 .news, .following {
-    height: 500px;
+    max-height: var(--heightScreen);
+    overflow-y: overlay;
 }
 
 .news__tab {
@@ -27,4 +28,30 @@
 
 .btn-news {
     padding: 5px 12px;
+}
+
+.news__photo-block {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 8px;
+}
+
+.news__block {
+    padding: 0 8px;
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.news__block .gray_text {
+    text-transform: uppercase;
+    font-size: 9pt;
+    font-weight: 700;
+}
+
+.news__block__flexed {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
 }

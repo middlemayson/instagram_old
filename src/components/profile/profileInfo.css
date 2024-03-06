@@ -80,3 +80,11 @@
     border-bottom: 1px solid #cccccc;
 }
 
+
+.td__fixed-width {
+    width: 95px;
+}
+
+.td--profile a, .td--profile a:visited, .ads a, .ads a:visited {
+    color: #333333;
+}

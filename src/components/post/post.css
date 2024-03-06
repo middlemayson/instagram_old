@@ -47,6 +47,11 @@
     height: 17px;
 }
 
+.post__img img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
 .post__actions {
     margin-top: 5px;
 }

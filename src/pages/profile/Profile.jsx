@@ -1,8 +1,8 @@
 import { useState } from 'react';
-
+// import { useParams } from 'react-router-dom';
 import { profile } from '../../components/array/profile';
 import ProfileInfo from '../../components/profile/ProfileInfo';
-import Photo from '../../components/photo/Photo';
+import ProfileGrid from '../../components/profile/ProfileGrid';
 
 import ProfilePost from '../../components/post/ProfilePost'
 
@@ -19,10 +19,12 @@ import './profile.css';
 const Profile = () => {
 
     const [activeTab, setActiveTab] = useState('grid');
-    
     const handleTabClick = (tab) => {
         setActiveTab(tab);
     };
+    // const {id} = useParams();
+    // const profilePhotoLink = profile[id];
+
     return (
         <section className="profile">
             {profile.map((profile) => {
@@ -40,9 +42,9 @@ const Profile = () => {
                 </div>
             </div>
             <div className={activeTab === 'grid' ? 'profile__photo-grid active' : 'profile__photo-grid'}>
-            {profile.map((profile) => {
+            {profile.map((profile, id) => {
                 return profile.photo.map((photo) => (
-                    <Photo key={photo.id} photo={photo.photo} />
+                    <ProfileGrid key={photo.id} photo={photo.photo} index={id} />
                 ));
             })}
             </div>
