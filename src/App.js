@@ -9,6 +9,7 @@ import News from './pages/news/News';
 
 import './style/main.css';
 import './style/reset.css';
+import Following from './pages/following/Following';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/explore' element={<Explore />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/news' element={<News />} />
+          <Route path='/following' element={<Following />} />
         </Routes>
         
         <Navbar />

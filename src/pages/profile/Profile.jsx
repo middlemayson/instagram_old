@@ -35,7 +35,7 @@ const Profile = () => {
                 <div onClick={() => handleTabClick('list')} className={`list-btn-area ${activeTab === 'list' ? 'active' : ''}`}>
                     <img src={activeTab === 'list' ? listBlue_icon : listGray_icon} alt="" />
                 </div>
-                <div onClick={() => handleTabClick('map')} className={`map-btn-area ${activeTab === 'map' ? 'active && active-bg' : ''}`}>
+                <div className='map-btn-area'>
                     <div className='bold'><img src={map_icon} alt="" />Photo Map<img className='map-arrow' src={arrow_icon} alt='' /></div>
                 </div>
             </div>
@@ -51,9 +51,7 @@ const Profile = () => {
                     })}
             </div>
             </div>
-            <div className={activeTab === 'map' ? 'profile__photo-map active' : 'profile__photo-map'}>
-                MAP
-            </div>
+            
         </section>
     );
 }

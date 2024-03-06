@@ -23,6 +23,7 @@
     padding: 5px 9px;
     height: 35px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .btn-shadow:hover{

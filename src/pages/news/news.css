@@ -1,0 +1,30 @@
+.news, .following {
+    height: 500px;
+}
+
+.news__tab {
+    box-shadow: inset 0px 0px 2px black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    height: 35px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 35px;
+}
+
+.news__tab a, a:visited {
+    font-weight: 600;
+    color: white;
+    font-size: 11pt;
+    text-shadow: 0px 1px 0.5px rgba(0, 0, 0, 0.486);
+}
+
+.btn-news--active {
+    padding: 7px 12px;
+    background-color: #17355680;
+}
+
+.btn-news {
+    padding: 5px 12px;
+}

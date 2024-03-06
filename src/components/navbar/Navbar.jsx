@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import feed_icon from '../../img/elements/tab_bar_glyph_feed.png';
 import explore_icon from '../../img/elements/tab_bar_glyph_explore.png';
@@ -10,15 +10,22 @@ import './navbar.css';
 
 const Navbar = () => {
 
+    const location = useLocation();
+
+    const isActive = (path) => {
+        return location.pathname === path;
+    };
+
     const activeLink = 'btn-nav--active';
     const normalLink = 'btn-nav';
+    
 
     return (
     <section className="navbar">
         <NavLink to='/' className={({isActive}) => isActive ? activeLink : normalLink}><img src={feed_icon} alt="" /></NavLink>
         <NavLink to='/explore' className={({isActive}) => isActive ? activeLink : normalLink}><img src={explore_icon} alt="" /></NavLink>
         <div className="btn-nav blue"><img src={camera_icon} alt="" /></div>
-        <NavLink to='/news' className={({isActive}) => isActive ? activeLink : normalLink}><img src={news_icon} alt="" /></NavLink>
+        <NavLink to='/following' className={isActive('/following') || isActive('/news') ? activeLink : normalLink}><img src={news_icon} alt="" /></NavLink>
         <NavLink to='/profile' className={({isActive}) => isActive ? activeLink : normalLink}><img src={profile_icon} alt="" /></NavLink>
     </section>
     );
