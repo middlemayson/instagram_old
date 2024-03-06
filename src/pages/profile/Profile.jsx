@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { profile } from '../../components/array/profile';
 import ProfileInfo from '../../components/profile/ProfileInfo';
 import Photo from '../../components/photo/Photo';
-import { photoList } from '../../components/array/photoList';
-import Post from '../../components/post/Post';
-import { feedList } from '../../components/array/FeedList';
+
+import ProfilePost from '../../components/post/ProfilePost'
+
 
 import gridBlue_icon from '../../img/elements/grid_icon.png';
 import gridGray_icon from '../../img/elements/grid_icon_gray.png';
@@ -19,7 +19,7 @@ import './profile.css';
 const Profile = () => {
 
     const [activeTab, setActiveTab] = useState('grid');
-
+    
     const handleTabClick = (tab) => {
         setActiveTab(tab);
     };
@@ -40,15 +40,30 @@ const Profile = () => {
                 </div>
             </div>
             <div className={activeTab === 'grid' ? 'profile__photo-grid active' : 'profile__photo-grid'}>
-                {photoList.map((photo) => {
-                    return <Photo key={photo.id} photo={photo.photo} />
-                })}
+            {profile.map((profile) => {
+                return profile.photo.map((photo) => (
+                    <Photo key={photo.id} photo={photo.photo} />
+                ));
+            })}
             </div>
             <div className={activeTab === 'list' ? 'profile__photo-list active' : 'profile__photo-list'}>
             <div className="feed__post feed__post-profile">
-                {feedList.map((post) => {
-                        return <Post key={post.id} author={post.author} location={post.location} photo={post.photo} avatar={post.avatar} desc={post.desc} likes={post.likes} comments={post.comments} timePublish={post.timePublish} />
-                    })}
+                {profile.map((profile) => {
+                    return profile.photo.map((photo) => (
+                        <ProfilePost
+                            key={photo.id}
+                            author={profile.author}
+                            location={photo.location}
+                            photo={photo.photo}
+                            avatar={profile.avatar}
+                            desc={photo.desc}
+                            likes={photo.likes}
+                            comments={photo.comments.length}
+                            timePublish={photo.timePublish}
+                            comment={photo.comments.slice(-3)}
+                        />
+                    ));
+                })}
             </div>
             </div>
             

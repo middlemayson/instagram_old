@@ -5,7 +5,7 @@ import like_icon from '../../img/elements/stream_photo_activity_glyph_likes.png'
 import comment_icon from '../../img/elements/stream_photo_activity_glyph_comments.png';
 import './post.css';
 
-const Post = ({author, location, photo, avatar, desc, likes, comments, timePublish}) => {
+const PofilePost = ({author, location, photo, avatar, desc, likes, comments, comment, timePublish}) => {
     return (
     <section className="post">
         
@@ -13,7 +13,7 @@ const Post = ({author, location, photo, avatar, desc, likes, comments, timePubli
             <div className="post__avatar"><img src={avatar} alt={author} /></div>
             <div className="post__author">
                 <h3>{author}</h3>
-                <p className="lightBlue_text flexed"><img src={location_icon} alt="" />{location}</p>
+                {location && ( <p className="lightBlue_text flexed"><img src={location_icon} alt="" />{location}</p> )}
             </div>
             <div className="post__time"><img src={time_icon} alt="" /><p className="gray_text">{timePublish}h</p></div>
         </div>
@@ -25,9 +25,11 @@ const Post = ({author, location, photo, avatar, desc, likes, comments, timePubli
             </div>
             <div className="post__comments">
                 <p className='gray_text'>view all {comments} comments</p>
-                <p><span className='blue_text bold'>ibrahim</span>Nice photo bro!</p>
-                <p><span className='blue_text bold'>middle.mayson</span>like share follow</p>
-                <p><span className='blue_text bold'>spam.user</span>please follow me</p>
+                {comment.map((comment, index) => (
+            <div key={index}>
+                <p><span className='blue_text bold'>{comment.author}</span> {comment.text}</p>
+            </div>
+        ))}
             </div>
             <div className="post__btn">
                 <div className='flexed'>
@@ -41,4 +43,4 @@ const Post = ({author, location, photo, avatar, desc, likes, comments, timePubli
 );
 }
  
-export default Post;
+export default PofilePost;
